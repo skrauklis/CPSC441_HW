@@ -1,0 +1,40 @@
+#install.packages("rmarkdown")
+#library(rmarkdown)
+
+
+#Q1
+#2x+5y=33
+#x+3y=19
+
+#set up both sides of the system
+
+```{r}
+a<-matrix(c(2,5,1,3),nrow=2,byrow=2)
+b<-c(33,19)
+```
+
+#solve function
+```{r}
+solve(a,b)
+```
+
+
+#Q2
+```{r}
+v1<-c(1:100)
+average<-sum(v1)/length(v1)
+```
+#50.5
+
+#Q3
+```{r}
+install.packages("dplyr")
+```
+
+#Q4
+```{r}
+df<-matrix(c("A","B","C","D","D","E","F","G"),nrow=2,ncol=4, byrow=T)
+```
+#     [,1] [,2] [,3] [,4]
+#[1,] "A"  "B"  "C"  "D" 
+#[2,] "D"  "E"  "F"  "G" 
