@@ -1,0 +1,34 @@
+---
+title: "HW3"
+author: "skrauklis"
+date: "9/15/2020"
+output: html_document
+---
+
+```{r}
+vmean<-function(v){
+  mid<-na.omit(v)
+  fin<-sum(mid)/length(mid)
+  return(fin)}
+  
+v1<-c(10,13,18,NA)
+
+vmean(v1)
+```
+
+```{r}
+#2
+cy<-read.csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-01/key_crop_yields.csv")
+
+range(cy$Year)
+```
+
+```{r}
+#3
+vmean(cy$Maize..tonnes.per.hectare.)
+```
+
+```{r}
+#4
+write.csv(cy$Entity,"Entity.csv")
+```
